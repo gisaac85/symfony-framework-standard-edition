@@ -11,8 +11,9 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/hello/{name}")
+     * @Route("/hello/")
     */
-    public function indexAction($name)
+    public function indexAction($name='Gaorieh')
     {
       $res=new Response(json_encode(array('name'=>$name)));
       $res->headers->set('Content-Type','application/json');
