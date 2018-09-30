@@ -1,7 +1,3 @@
-isaac_workout:
-    resource: "@isaacWorkoutBundle/Controller/"
-    type:     annotation
-    prefix:   /
 
 app:
     resource: '@AppBundle/Controller/'
