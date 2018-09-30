@@ -1,0 +1,4 @@
+services:
+#    isaac_workout.example:
+#        class: isaac\WorkoutBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
