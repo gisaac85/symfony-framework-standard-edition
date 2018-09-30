@@ -1,7 +1,7 @@
 zenva_workout:
     resource: "@ZenvaWorkoutBundle/Controller/"
     type:     annotation
-    prefix:   /zenva
+    prefix:   /
 
 app:
     resource: '@AppBundle/Controller/'
