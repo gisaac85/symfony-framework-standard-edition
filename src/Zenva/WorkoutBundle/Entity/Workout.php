@@ -34,6 +34,13 @@ class Workout
      * @ORM\Column(name="activity", type="string", length=255)
      */
     private $activity;
+    
+    /**
+     * @var float
+     * 
+     * @ORM\Column(name="hours", type="float")
+     */
+    private $hours;
 
 
     /**
@@ -92,6 +99,30 @@ class Workout
     public function getActivity()
     {
         return $this->activity;
+    }
+    
+     /**
+     * Get hours
+     *
+     * @return float
+     */
+    public function getHours()
+    {
+        return $this->hours;
+    }
+    
+    /**
+     * Set hours
+     *
+     * @param float $hours
+     *
+     * @return Workout
+     */
+    public function setHours($hours)
+    {
+        $this->hours = $hours;
+
+        return $this;
     }
 }
 

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Workouts list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Occurrencedate</th>
+                <th>Activity</th>
+                <th>Hours</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for workout in workouts %}
+            <tr>
+                <td><a href="{{ path('workout_show', { 'id': workout.id }) }}">{{ workout.id }}</a></td>
+                <td>{% if workout.occurrenceDate %}{{ workout.occurrenceDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ workout.activity }}</td>
+                <td>{{ workout.hours }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('workout_show', { 'id': workout.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('workout_edit', { 'id': workout.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('workout_new') }}">Create a new workout</a>
+        </li>
+    </ul>
+{% endblock %}
